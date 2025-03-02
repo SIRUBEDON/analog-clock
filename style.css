@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+    font-family: 'Arial', sans-serif;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: 10px solid #333;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.clock-face {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    transform: translateY(-3px);
+}
+
+.center-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+    width: 80px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 3px;
+    transform-origin: 0 50%;
+    z-index: 8;
+}
+
+.minute-hand {
+    width: 110px;
+    height: 4px;
+    background-color: #555;
+    border-radius: 2px;
+    transform-origin: 0 50%;
+    z-index: 7;
+}
+
+.second-hand {
+    width: 120px;
+    height: 2px;
+    background-color: #d81e1e;
+    border-radius: 1px;
+    transform-origin: 0 50%;
+    z-index: 6;
+}
+
+.number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.number1 { transform: rotate(30deg); }
+.number2 { transform: rotate(60deg); }
+.number3 { transform: rotate(90deg); }
+.number4 { transform: rotate(120deg); }
+.number5 { transform: rotate(150deg); }
+.number6 { transform: rotate(180deg); }
+.number7 { transform: rotate(210deg); }
+.number8 { transform: rotate(240deg); }
+.number9 { transform: rotate(270deg); }
+.number10 { transform: rotate(300deg); }
+.number11 { transform: rotate(330deg); }
+.number12 { transform: rotate(0deg); }
+
+/* 数字を正しい向きに戻す */
+.number span {
+    display: inline-block;
+    transform: rotate(-30deg);
+}
+
+.number1 span { transform: rotate(-30deg); }
+.number2 span { transform: rotate(-60deg); }
+.number3 span { transform: rotate(-90deg); }
+.number4 span { transform: rotate(-120deg); }
+.number5 span { transform: rotate(-150deg); }
+.number6 span { transform: rotate(-180deg); }
+.number7 span { transform: rotate(-210deg); }
+.number8 span { transform: rotate(-240deg); }
+.number9 span { transform: rotate(-270deg); }
+.number10 span { transform: rotate(-300deg); }
+.number11 span { transform: rotate(-330deg); }
+.number12 span { transform: rotate(0deg); }
